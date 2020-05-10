@@ -17,8 +17,7 @@ public class Anime {
 
     public Anime(){}
 
-    public Anime(Long id, String title, String status) {
-        this.id = id;
+    public Anime(String title, String status) {
         this.title = title;
         this.status = status;
     }
