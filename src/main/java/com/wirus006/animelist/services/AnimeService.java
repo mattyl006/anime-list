@@ -46,12 +46,17 @@ public class AnimeService {
         else return false;
     }
 
-    public Integer showCountOfAnimeStatus(String status) {
-        return animeRepo.showCountOfAnimeStatus(status);
+    public Long countByStatus(String status) {
+        return animeRepo.countByStatus(status);
     }
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
+        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
         save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
     }
 }

@@ -3,26 +3,26 @@ package com.wirus006.animelist.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Anime")
+//@Table(name = "Anime")
 public class Anime {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+//    @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
+//    @Column(name = "title")
     private String title;
 
-    @Column(name = "studio")
+//    @Column(name = "studio")
     private String studio;
 
-    @Column(name = "premiered")
+//    @Column(name = "premiered")
     private Integer premiered;
 
-    @Column(name = "episodes")
+//    @Column(name = "episodes")
     private Integer episodes;
 
-    @Column(name = "status")
+//    @Column(name = "status")
     private String status;
 
     public Anime(){}

@@ -74,7 +74,7 @@ public class AnimeController {
     @RequestMapping(value = "/anime/{id}", method = RequestMethod.DELETE)
     public RedirectView deleteAnime(HttpServletResponse response, @PathVariable Long id) {
         animeService.deleteById(id);
-        return new RedirectView("/api/animes", true);
+        return new RedirectView("/animes", true);
     }
 
     @RequestMapping(value = "/anime", method = RequestMethod.DELETE)
@@ -84,9 +84,7 @@ public class AnimeController {
 
     //Endpointy statystyczne
 
-    @RequestMapping(value = "/animes/typeCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Integer showCountofAnimeType(@RequestParam String status) {return animeService.showCountOfAnimeStatus(status);}
-
-
+    @RequestMapping(value = "/animes/statusCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Long countByStatus(@RequestParam String status) {return animeService.countByStatus(status);}
 
 }
