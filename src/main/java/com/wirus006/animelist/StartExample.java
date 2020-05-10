@@ -19,7 +19,7 @@ public class StartExample {
 
     @EventListener(ApplicationReadyEvent.class)
     public void runExample() {
-        Anime anime = new Anime("Prince of tennis", "Completed");
+        Anime anime = new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed");
         animeRepo.save(anime);
     }
 }
