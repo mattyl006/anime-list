@@ -1,0 +1,30 @@
+[
+  {
+    "title": "a",
+    "studio": "a",
+    "premiered": 1,
+    "episodes": 1,
+    "status": "a"
+  },
+  {
+    "title": "b",
+    "studio": "b",
+    "premiered": 2,
+    "episodes": 2,
+    "status": "b"
+  },
+  {
+    "title": "c",
+    "studio": "c",
+    "premiered": 3,
+    "episodes": 3,
+    "status": "c"
+  },
+  {
+    "title": "d",
+    "studio": "d",
+    "premiered": 4,
+    "episodes": 4,
+    "status": "d"
+  }
+]
