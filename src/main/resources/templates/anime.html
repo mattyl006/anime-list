@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Anime test</h1>
+    <ul>
+        <li th:text="${anime.getTitle()}"></li>
+        <li th:text="${anime.getStudio()}"></li>
+        <li th:text="${anime.getPremiered()}"></li>
+        <li th:text="${anime.getEpisodes()}"></li>
+        <li th:text="${anime.getStatus()}"></li>
+    </ul>
+</body>
+</html>
