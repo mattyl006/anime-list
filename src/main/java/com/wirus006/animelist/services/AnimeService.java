@@ -56,12 +56,21 @@ public class AnimeService {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() throws JsonProcessingException {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        String animeJson = "{ \"title\" : \"Prince of tennis1\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}";
+//        Anime a = objectMapper.readValue(animeJson, Anime.class);
+//        save(a);
+
+        String animesJson = "[{\"title\" : \"Prince of tennis1\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}," +
+                " {\"title\" : \"Prince of tennis2\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}," +
+                " {\"title\" : \"Prince of tennis3\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}]";
         ObjectMapper objectMapper = new ObjectMapper();
-        String animeJson = "{ \"title\" : \"Prince of tennis1\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}";
-        Anime a = objectMapper.readValue(animeJson, Anime.class);
-        save(a);
-        save(new Anime("Prince of tennis2", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("asd", "asd", 2020, 0, "Dropped"));
-        save(new Anime("Prince of tennis3", "Trans Arts", 2002, 100, "Completed"));
+        List<Anime> animes = objectMapper.readValue(animesJson, new TypeReference<List<Anime>>(){});
+        for(Anime a : animes) {
+            save(a);
+        }
+//        save(new Anime("Prince of tennis2", "Trans Arts", 2001, 178, "Completed"));
+//        save(new Anime("asd", "asd", 2020, 0, "Dropped"));
+//        save(new Anime("Prince of tennis3", "Trans Arts", 2002, 100, "Completed"));
     }
 }
