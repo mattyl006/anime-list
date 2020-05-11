@@ -51,6 +51,30 @@ public class Anime {
         this.title = title;
     }
 
+    public String getStudio() {
+        return studio;
+    }
+
+    public void setStudio(String studio) {
+        this.studio = studio;
+    }
+
+    public Integer getPremiered() {
+        return premiered;
+    }
+
+    public void setPremiered(Integer premiered) {
+        this.premiered = premiered;
+    }
+
+    public Integer getEpisodes() {
+        return episodes;
+    }
+
+    public void setEpisodes(Integer episodes) {
+        this.episodes = episodes;
+    }
+
     public String getStatus() {
         return status;
     }

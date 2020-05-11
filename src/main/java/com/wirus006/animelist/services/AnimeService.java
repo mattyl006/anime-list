@@ -1,5 +1,8 @@
 package com.wirus006.animelist.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wirus006.animelist.entities.Anime;
 import com.wirus006.animelist.repositories.AnimeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +55,13 @@ public class AnimeService {
     }
 
     @EventListener(ApplicationReadyEvent.class)
-    public void fillDB() {
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+    public void fillDB() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        String animeJson = "{ \"title\" : \"Prince of tennis1\", \"studio\" : \"Trans Arts\", \"premiered\" : 2001, \"episodes\" : 178, \"status\" : \"Completed\"}";
+        Anime a = objectMapper.readValue(animeJson, Anime.class);
+        save(a);
+        save(new Anime("Prince of tennis2", "Trans Arts", 2001, 178, "Completed"));
         save(new Anime("asd", "asd", 2020, 0, "Dropped"));
-        save(new Anime("Prince of tennis2", "Trans Arts", 2002, 100, "Completed"));
+        save(new Anime("Prince of tennis3", "Trans Arts", 2002, 100, "Completed"));
     }
 }
