@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import springfox.documentation.annotations.ApiIgnore;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -85,6 +86,9 @@ public class AnimeController {
     //Endpointy statystyczne
 
     @RequestMapping(value = "/animes/statusCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Long countByStatus(@RequestParam String status) {return animeService.countByStatus(status);}
+    public Long countByStatus(@RequestParam String status) {
+        System.out.println(status);
+        return animeService.countByStatus(status);
+    }
 
 }

@@ -8,6 +8,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -53,10 +54,7 @@ public class AnimeService {
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
         save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
-        save(new Anime("Prince of tennis", "Trans Arts", 2001, 178, "Completed"));
+        save(new Anime("asd", "asd", 2020, 0, "Dropped"));
+        save(new Anime("Prince of tennis2", "Trans Arts", 2002, 100, "Completed"));
     }
 }
