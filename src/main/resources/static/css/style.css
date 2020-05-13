@@ -12,6 +12,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: #3D348B;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
@@ -23,9 +24,19 @@ body {
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
     font-size: 64px;
     color: #3D348B;
+}
+
+.anime-table__caption {
+    background-color: #3D348B;
+    max-height: 64px;
+}
+
+.caption__text {
+    margin: 16px 0;
+    font-size: 32px;
+    color: #fff;
 }
 
 
