@@ -28,7 +28,6 @@ public class AnimeController {
     }
 
     //basic operations
-
     @RequestMapping(value = "/animes", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Anime> getAll() {
         return animeService.findAll();
@@ -49,6 +48,14 @@ public class AnimeController {
         return animeService.findById(index);
     }
 
+    // statistics endpoints
+    @RequestMapping(value = "/animes/statusCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Long countByStatus(@RequestParam String status) {
+        System.out.println(status);
+        return animeService.countByStatus(status);
+    }
+
+    // Methods for postman
     @RequestMapping(value = "/anime", method = RequestMethod.POST)
     public ResponseEntity<Anime> addAnime(@RequestBody @Validated @NotNull Anime anime) {
         animeService.save(anime);
@@ -65,7 +72,7 @@ public class AnimeController {
         }
     }
 
-    // Only for redirect!
+    //for redirect
     @ApiIgnore
     @RequestMapping(value = "/animes", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Anime> redirect(Model model) {
@@ -81,14 +88,6 @@ public class AnimeController {
     @RequestMapping(value = "/anime", method = RequestMethod.DELETE)
     public void deleteParamAnime(@RequestParam Long index) {
         animeService.deleteById(index);
-    }
-
-    //Endpointy statystyczne
-
-    @RequestMapping(value = "/animes/statusCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Long countByStatus(@RequestParam String status) {
-        System.out.println(status);
-        return animeService.countByStatus(status);
     }
 
 }
