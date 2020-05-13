@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing : inherit;
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #3D348B;
+}
+
+.main {
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    color: #3D348B;
+}
+
+
