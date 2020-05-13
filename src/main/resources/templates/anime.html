@@ -6,12 +6,8 @@
 </head>
 <body>
     <h1>Anime test</h1>
-    <ul>
-        <li th:text="${anime.getTitle()}"></li>
-        <li th:text="${anime.getStudio()}"></li>
-        <li th:text="${anime.getPremiered()}"></li>
-        <li th:text="${anime.getEpisodes()}"></li>
-        <li th:text="${anime.getStatus()}"></li>
+    <ul th:each="anime: ${animes}">
+        <li th:text="${anime.getTitle()} + ' ' + ${anime.getStatus()}"></li>
     </ul>
 </body>
 </html>
