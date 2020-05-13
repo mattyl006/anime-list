@@ -7,9 +7,29 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Anime test</h1>
-    <ul th:each="anime: ${animes}">
-        <li th:text="${anime.getTitle()} + ' ' + ${anime.getStatus()}"></li>
-    </ul>
+    <main class="main">
+        <h1 class="title">MyAnimeList</h1>
+        <table class="anime-table">
+            <caption class="anime-table__caption">ALL ANIMES</caption>
+            <thead class="anime-table__thead">
+                <tr class="anime-table__header">
+                    <th class="header__item">Anime Title</th>
+                    <th class="header__item">Studio</th>
+                    <th class="header__item">Premiered</th>
+                    <th class="header__item">Episodes</th>
+                    <th class="header__item">Status</th>
+                </tr>
+            </thead>
+            <tbody class="anime-table__body">
+                <tr class="anime-table__content" th:each="anime: ${animes}">
+                    <td class="content__item content__item--title" th:text="${anime.getTitle()}"></td>
+                    <td class="content__item content__item--studio" th:text="${anime.getStudio()}"></td>
+                    <td class="content__item content__item--premiered" th:text="${anime.getPremiered()}"></td>
+                    <td class="content__item content__item--episodes" th:text="${anime.getEpisodes()}"></td>
+                    <td class="content__item content__item--status" th:text="${anime.getStatus()}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
