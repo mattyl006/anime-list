@@ -1,6 +1,6 @@
 # anime-list  
 
-*Aplikacja webowa*
+*Aplikacja webowa* - [Odnośnik do podglądu]([GitHub](http://github.com))
 
 ## Wykorzystane technologie  
 
@@ -11,4 +11,5 @@
 * Semantyczny HTML
 * CSS
 * JavaScript
+* Serwis Heroku
 
