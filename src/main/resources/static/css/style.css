@@ -62,4 +62,8 @@ body {
     color: #3D348B;
 }
 
+.content__item--status {
+    font-weight: bold;
+}
+
 
