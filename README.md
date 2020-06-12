@@ -1,6 +1,9 @@
 # anime-list  
 
-*[Aplikacja webowa](https://anime-list-wiri.herokuapp.com/).*
+**[Aplikacja webowa](https://anime-list-wiri.herokuapp.com/).**  
+
+Jest to projekt strony podpiętej pod bazę danych, gdzie znajdują się dane dotyczące seriali animowanych.
+Ćwiczę tutaj manipulację bazą danych, oraz *full stack development*.
 
 ## Wykorzystane technologie  
 
