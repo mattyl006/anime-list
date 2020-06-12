@@ -1,6 +1,6 @@
 # anime-list  
 
-*Aplikacja webowa* - [Odnośnik do podglądu](https://anime-list-wiri.herokuapp.com/)
+*[Aplikacja webowa](https://anime-list-wiri.herokuapp.com/).*
 
 ## Wykorzystane technologie  
 
